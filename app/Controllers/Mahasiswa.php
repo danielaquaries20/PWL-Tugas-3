@@ -12,6 +12,14 @@
             require_once 'app/Views/index.php';
         }
 
+        function hapus_data() {
+
+            $id = $_GET['i'];
+
+            $rs = $this->mhs->hapusData($id);
+            $this->index();
+        }
+
         function show_data()
         {
             if(!isset($_GET['i']))

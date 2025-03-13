@@ -14,6 +14,7 @@
 						echo 'id:' . $rs['id'] . '<br/>';
 						echo 'NIM:' . $rs['nim'] . '<br/>';
 						echo 'Nama:' . $rs['nama'] . '<br/>';
+						echo 'Created At:' . $rs['created_at'] . '<br/>';
 
 					?>
 				</div>

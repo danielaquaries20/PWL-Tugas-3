@@ -22,10 +22,17 @@
             $rs->execute([$nim,$nama]);
         }
 
+        function hapusData($id)
+        {
+            $rs = $this->dbh->prepare("UPDATE mahasiswa SET delete_at = NOW() WHERE id = ?");
+            $rs->execute([$id]);
+        }
+
+
         function lihatData()
         {
 
-            $rs = $this->dbh->query("SELECT * FROM mahasiswa");
+            $rs = $this->dbh->query("SELECT * FROM mahasiswa WHERE delete_at is NULL");
             return $rs;
         }
 

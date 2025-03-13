@@ -34,11 +34,13 @@
 				$controller->show_data();
 				break;
 
+			case 'hapus-data' :
+				$controller->hapus_data();
+				break;
+
 			default : 
 				$controller->index();
 				break;
 		}
 	}
-
-
 ?>
